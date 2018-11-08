@@ -16,6 +16,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Yo</string>
 	<key>CFBundleIconFile</key>
 	<string>${ICON}</string>
 </dict>

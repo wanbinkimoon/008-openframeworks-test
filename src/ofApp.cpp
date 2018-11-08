@@ -5,6 +5,7 @@ void ofApp::setup(){
   ofBackground(0);
   bar.setup();
   shader.load("shader_1/shader");
+  grid.cellSetup(6, 6);
 }
 
 //--------------------------------------------------------------
@@ -15,7 +16,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
   shader.begin();
-  grid.draw(12, [&]{bar.draw();});
+    grid.draw(grid.cell, [&]{bar.draw();});
   shader.end();
 }
 

@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "grigliata.hpp"
 #include "barretta.hpp"
+#include "worldCreator.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -23,8 +24,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
   
-  GrigliataClass grid;
-  BarrettaClass bar;
-  ofShader shader;
+    GrigliataClass grid;
+    BarrettaClass bar;
+    ofShader shader;
+    WorldCreator world;
     
 };
