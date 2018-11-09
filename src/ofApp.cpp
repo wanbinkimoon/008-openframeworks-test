@@ -5,18 +5,20 @@ void ofApp::setup(){
   ofBackground(0);
   bar.setup();
   shader.load("shader_1/shader");
-  grid.cellSetup(6, 6);
+  grid.cellSetup(consts.rows, consts.cols);
+  bar.cell = grid.cell;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
   bar.update();
+//  world.update(grid.cell);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
   shader.begin();
-    grid.draw(grid.cell, [&]{bar.draw();});
+  grid.draw(grid.cell, [&]{bar.draw();});
   shader.end();
 }
 

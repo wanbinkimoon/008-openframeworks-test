@@ -8,6 +8,7 @@
 
 #include "ofMain.h"
 #include "soundLab.hpp"
+#include "cell.h"
 
 class BarrettaClass : public ofBaseApp{
   
@@ -16,6 +17,6 @@ public:
   void update();
   void draw();
   SoundLab sound;
-  
+  Cell cell;
 };
 

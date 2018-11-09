@@ -3,10 +3,16 @@
 #include "ofMain.h"
 #include "grigliata.hpp"
 #include "barretta.hpp"
-#include "worldCreator.hpp"
+
+class Constants {
+  public:
+  int rows = 6;
+  int cols = 6;
+};
+
+//---------------
 
 class ofApp : public ofBaseApp{
-
 	public:
 		void setup();
 		void update();
@@ -24,9 +30,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
   
-    GrigliataClass grid;
+    Constants consts;
+    Grid grid;
     BarrettaClass bar;
     ofShader shader;
-    WorldCreator world;
-    
+  
 };
